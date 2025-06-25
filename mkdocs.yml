@@ -17,7 +17,7 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
-      primary: "purple"
+      primary: "pink"
       accent: "white"
       scheme: slate
       toggle:
