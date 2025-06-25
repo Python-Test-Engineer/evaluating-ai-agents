@@ -10,7 +10,7 @@ theme:
   name: "material" # readthedocs
   palette:
     - media: "(prefers-color-scheme: light)"
-      primary: "orange"
+      primary: "pink"
       accent: "grey"
       scheme: default
       toggle:
