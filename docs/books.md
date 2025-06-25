@@ -1,6 +1,10 @@
 # Books
 
-I have two other 'books':
+I have three other 'books':
+
+### AI Powered Knowledge Systems
+
+[ AI Powered Knowledge Systems](https://ai-powered-knowledge-systems.netlify.app/)
 
 ### PyTest Cookbook
 
