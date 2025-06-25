@@ -1,0 +1,97 @@
+[
+    {
+        "type": "Title",
+        "element_id": "0405351ac64213c7b1e40e31aff7d21b",
+        "metadata": {
+            "filename": "Bank Good Credit Loan.pptx",
+            "file_directory": "tmpdocs",
+            "last_modified": "2023-11-02T15:16:14",
+            "filetype": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "category_depth": 1,
+            "languages": [
+                "eng"
+            ],
+            "page_number": 1
+        },
+        "text": "Bank Good Credit "
+    },
+    {
+        "type": "NarrativeText",
+        "element_id": "214987ebee9fd615365185fb3d692253",
+        "metadata": {
+            "filename": "Bank Good Credit Loan.pptx",
+            "file_directory": "tmpdocs",
+            "last_modified": "2023-11-02T15:16:14",
+            "filetype": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "parent_id": "0405351ac64213c7b1e40e31aff7d21b",
+            "category_depth": 0,
+            "languages": [
+                "eng"
+            ],
+            "page_number": 1
+        },
+        "text": "Accredited with IABAC™"
+    },
+    {
+        "type": "ListItem",
+        "element_id": "5eb6ec96e6a3493c1ae56747ae457b7f",
+        "metadata": {
+            "filename": "Bank Good Credit Loan.pptx",
+            "file_directory": "tmpdocs",
+            "last_modified": "2023-11-02T15:16:14",
+            "filetype": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "parent_id": "2dc308bd8d3a5c745dfacc3bdccd81db",
+            "category_depth": 1,
+            "languages": [
+                "eng"
+            ],
+            "page_number": 2
+        },
+        "text": "Data provided"
+    },
+    {
+        "type": "Table",
+        "element_id": "0f932c1c78cd59aef141af819dfdcf84",
+        "metadata": {
+            "filename": "currency.csv",
+            "file_directory": "tmpdocs",
+            "last_modified": "2023-11-02T15:17:41",
+            "filetype": "text/csv",
+            "languages": [
+                "eng"
+            ],
+            "text_as_html": "<table border=\"1\" class=\"dataframe\">\n  <tbody>\n    <tr>\n      <td>Code</td>\n      <td>Symbol</td>\n      <td>Name</td>\n    </tr>\n    td>\n      <td>Ft</td>\n           <td>ZK</td>\n      <td>Zambian kwacha</td>\n    </tr>\n  </tbody>\n</table>"
+        },
+        "text": "\n\n\nCode\nSymbol\nName\n\n\nAED\n\u062f.\u0625\nUnited Arab Emirates d\n\n\nAFN\n\u060b\nAfghan afghani\n\n\nALL\nL\nAlbanian lek\n\n\nAMD\nAMD\nArmenian dram\n\n\nANG\n\u0192\nNetherlands Antillean gu\n\n\nAOA\nKz\nAngolan kwanza\n\n\nARS\n$\nArgentine i rial\n\n\nZAR\nR\nSouth African rand\n\n\nZMW\nZK\nZambian kwacha\n\n\n"
+    },
+    {
+        "type": "Image",
+        "element_id": "37883f438c468b3027dd7918a958dacd",
+        "text": "15 - & \u2014 10g =} \u2014 & \u20146g N Potential (V) \u2014 2 & = Control 2 e 88 25 T T 0.0000001 0.00001 0.001 01 Current Density (A/cm2)",
+        "metadata": {
+            "image": "base64 value",
+            "filetype": "application/pdf",
+            "languages": [
+                "eng"
+            ],
+            "page_number": 1,
+            "filename": "embedded-images-tables.pdf",
+            "data_source": {
+                "url": null,
+                "version": null,
+                "record_locator": {
+                    "path": "C:\\Users\\mrcra\\Desktop\\RAG\\pdf_input\\embedded-images-tables.pdf"
+                },
+                "date_created": "1727326976.0",
+                "date_modified": "1727326976.0",
+                "date_processed": "1729367235.6743865",
+                "permissions_data": [
+                    {
+                        "mode": 33206
+                    }
+                ],
+                "filesize_bytes": 109798
+            }
+        }
+    }
+]

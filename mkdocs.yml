@@ -1,0 +1,98 @@
+site_name: Evaluating AI Agents
+site_description: "Evaluating AI Agents"
+
+repo_url: https://evaluating-ai-agents.netlify.app/
+repo_name: evaluating-ai-agents
+
+theme:
+  icon:
+    repo: fontawesome/brands/github
+  name: "material" # readthedocs
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: "green"
+      accent: "grey"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: "purple"
+      accent: "white"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_javascript:
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"
+extra_css:
+  - "assets/css/custom.css"
+extra:
+  manifest: "manifest.json"
+  social:
+    - icon: "fontawesome/brands/github-alt"
+      link: "https://github.com/Python-Test-Engineer/"
+
+plugins:
+  - search
+  - mkdocstrings
+  # - blog:
+  #     blog_dir: blog
+  #     blog_toc: true
+  #     archive: true
+  #     archive_name: All Articles
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:material.extensions.emoji.twemoji
+  #     emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - attr_list
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+      separator: "_"
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+# Page tree
+nav:
+  - "About": "index.md"
+  - "Talks": "talks.md"
+  - "AI Agents and Data": "ai_data.md"
+  - "RAG TLDR": "tldr.md"
+  - "Current Concepts": "current_concepts.md"
+  - "RAG Pipeline":
+      - "Gather": "pipeline/01_gather.md"
+      - "Ingest and NLP": "pipeline/02_ingest.md"
+      - "Improve question": "pipeline/03_improve_question.md"
+      - "Query": "pipeline/04_retrieve_docs.md"
+      - "Rank and filter": "pipeline/05_rank_and_filter.md"
+      - "Generate": "pipeline/06_generate.md"
+      - "User rates and cache": "pipeline/07_user_rate_and_cache.md"
+  - "Technical Concepts":
+      - "Vector DBs": "concepts/vector_databases.md"
+      - "Agents": "concepts/agents.md"
+      - "Graphs": "concepts/graphs.md"
+      - "Model Fine Tuning": "concepts/fine_tuning.md"
+  - "Evaluation":
+      - "Overview": "evaluation/overview.md"
+      - "LLM as Judge": "evaluation/rate_with_llm.md"
+      - "Domain Expert": "evaluation/domain_expert.md"
+      - "Refine": "evaluation/refine.md"
+  - "Other Books":
+      - "PyTest Cookbook": "books.md"
+      - "PyTest Django Full Stack": "books.md"
+  - "About Craig":
+      - "Services": "craig/services.md"
+      - "CV": "craig/cv.md"
+      - "Courses": "craig/courses.md"
+      - "Contact": "craig/contact.md"
+
+copyright: |
+  &copy; 2025 <a href="https://evaluating-ai-agents.netlify.app/"  target="_blank" rel="noopener">Craig West -  Evaluating AI Agents</a>
