@@ -4,9 +4,20 @@ There are a number of ways we can evaluate the performance of the app.
 
 These use traditonal Natural Language Processing (NLP) and Machine Learning (ML) techniques.
 
-The main library we use, and this is more for the developers as we are developing different strategies, is [RAGAS](https://docs.ragas.io/en/stable/).
+There are a number of frameworks for evaluations.
+
+Evidently.ai and RAGAS are two that I like to work with.
+
+## Evidently.ai
+[https://github.com/evidentlyai/community-examples](https://github.com/evidentlyai/community-examples)
+
+I find this broader than RAGAS although one can tailor RAGAS in the same way.
 
 ## Ragas metrics
+
+[https://docs.ragas.io/en/stable/](https://docs.ragas.io/en/stable/)
+
+This is much more RAG focused.
 
 ### Context Precision 
 
