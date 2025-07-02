@@ -63,16 +63,12 @@ markdown_extensions:
 # Page tree
 nav:
   - "About": "index.md"
-  - "Talks": "talks.md"
-  - "Current Concepts": "current_concepts.md"
   - "Evaluation":
       - "Overview": "evaluation/overview.md"
       - "LLM as Judge": "evaluation/rate_with_llm.md"
       - "Domain Expert": "evaluation/domain_expert.md"
       - "Refine": "evaluation/refine.md"
-  - "Other Books":
-      - "PyTest Cookbook": "books.md"
-      - "PyTest Django Full Stack": "books.md"
+
   - "About Craig":
       - "Services": "craig/services.md"
       - "CV": "craig/cv.md"

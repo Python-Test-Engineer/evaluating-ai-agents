@@ -1,40 +1,20 @@
-# AI Powered Knowledge Systems
+# Evaluating AI Agents
 
-This is a work in progress where I collect resources and ideas concerning AI Search, Agentic AI and AI Data Analyst.
+## Aim
 
-As others have shared with me, I share my own research.
+This is a manual to establish EvalOps - a way of testing and evaluating Agentic systems.
 
-The areas I am working on are:
-
-## AI Search
-
-Using both Semantic and traditonal keyword search, a Hybrid search system can yield the best document retrieval for RAG implementations, particularly when combined with Agentic RAG strategies.
-
-We get the best k results from Full Text Search/Keyword search and the k best results from semantic search, combine them together, rerank and then return N best results.
-
-## Agentic RAG
-
-Retrieval Augmented Generation enables us to add domain specific data to our our prompts for better answers.
-
-Agentig RAG uses Agents to plan, retrieve, refine and generate answers using specilaist agents for each of these aspects.
-
-An example of this is Langgraph's **agentic-RAG**:
-
-![agentic-rag](./images/agentic-rag.png)
+### Agentic Evaluations
 
 
-## AI Data Analyst
+From https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_adaptive_rag_local/ we can see an Agentic workflow:
 
-The use of AI Agents in the Data Pipeline from ETL, Analysis to Reporting enables us to generate reports from data sources.
+![Agentic Evaluation](./images/agentic-rag-langchain.png)
 
-This is the emerge of the AI Data Analyst.
+A Unit Test in agentic terms is the smallest block of code that uses an llm to determine the ROUTE and the RESPONSE.
 
-Some aspects are best done with traditional Data Processing and we should not make them agentic just because that is in fashion.
-
-This can add non-deterministic bureaucracy to the data pipeline.
-
-There are two main approaches that are detailed in this book - creating SQL queries on the fly and using LLMs to select the most suitable SQL Query that has been developed and tested using AI Search of stored SQL Query Documents that contain not just the SQL but also metadata for report types and charts: 
-
-[https://ai-powered-knowledge-systems.netlify.app/ai_data/#text2sql](https://ai-powered-knowledge-systems.netlify.app/ai_data/#text2sql)
-
-<br>
+![Agentic Evaluation](./images/evaluating-ai-agents-1.png)
+![Agentic Evaluation](./images/evaluating-ai-agents-2.png)
+<!-- ![Agentic Evaluation](./images/evaluating-ai-agents-3.png) -->
+![Agentic Evaluation](./images/evaluating-ai-agents-4.png)
+![Agentic Evaluation](./images/evaluating-ai-agents-5.png)
