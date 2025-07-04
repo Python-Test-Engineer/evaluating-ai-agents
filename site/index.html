@@ -307,10 +307,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Aim">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#agentic_evaluations" class="md-nav__link">
     <span class="md-ellipsis">
       Agentic Evaluations
@@ -318,11 +317,30 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the_app" class="md-nav__link">
+  <a href="#routing" class="md-nav__link">
     <span class="md-ellipsis">
-      The App
+      Routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
     </span>
   </a>
   
@@ -330,6 +348,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Friction
+    </span>
+  </a>
   
 </li>
       
@@ -626,10 +662,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Aim">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#agentic_evaluations" class="md-nav__link">
     <span class="md-ellipsis">
       Agentic Evaluations
@@ -637,11 +672,30 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the_app" class="md-nav__link">
+  <a href="#routing" class="md-nav__link">
     <span class="md-ellipsis">
-      The App
+      Routing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
     </span>
   </a>
   
@@ -649,6 +703,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Friction
+    </span>
+  </a>
   
 </li>
       
@@ -670,18 +742,36 @@
 <h1 id="evaluating_ai_agents">Evaluating AI Agents<a class="headerlink" href="#evaluating_ai_agents" title="Permanent link">&para;</a></h1>
 <h2 id="aim">Aim<a class="headerlink" href="#aim" title="Permanent link">&para;</a></h2>
 <p>This is a manual to establish EvalOps - a way of testing and evaluating Agentic systems.</p>
-<h3 id="agentic_evaluations">Agentic Evaluations<a class="headerlink" href="#agentic_evaluations" title="Permanent link">&para;</a></h3>
+<h2 id="agentic_evaluations">Agentic Evaluations<a class="headerlink" href="#agentic_evaluations" title="Permanent link">&para;</a></h2>
 <p>We can see an Agentic workflow:</p>
 <p><img alt="Agentic Evaluation" src="images/agentic-rag-langchain.png" /></p>
 <p>A Unit Test in agentic terms is the smallest block of code that uses an llm to determine the ROUTE and the RESPONSE.</p>
-<p><img alt="Agentic Evaluation" src="images/evaluating-ai-agents-1.png" />
-<img alt="Agentic Evaluation" src="images/evaluating-ai-agents-2.png" /></p>
-<!-- ![Agentic Evaluation](./images/evaluating-ai-agents-3.png) -->
-<p><img alt="Agentic Evaluation" src="images/evaluating-ai-agents-4.png" />
-<img alt="Agentic Evaluation" src="images/evaluating-ai-agents-5.png" /></p>
-<h3 id="the_app">The App<a class="headerlink" href="#the_app" title="Permanent link">&para;</a></h3>
-<p>I have built an app that allows you to evaluate agentic systems. </p>
-<p>The repo is ... and we will use it to first understand the nature of the app and then determine how we test and evaluate it before using the tools to do this.</p>
+<p>It may contain other deterministic functionality which we can test in the usual way, but this manual focusses on testing and monitoring Agentic systems.</p>
+<h2 id="patterns">Patterns<a class="headerlink" href="#patterns" title="Permanent link">&para;</a></h2>
+<h3 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h3>
+<p>One fundamental pattern is ROUTING - does the Agent select the correct tool/function/skill with the correct inputs?</p>
+<p><img alt="Agentic Evaluation" src="images/evaluating-ai-agents-1.png" /></p>
+<p>There is also NEXT - does the Agent select the correct next step where this is applicable?</p>
+<p><img alt="Agentic Evaluation" src="images/evaluating-ai-agents-4.png" /></p>
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
+<p>For a given input, we will obtain an output. </p>
+<p>We may retrieve additonal context to support the generation of the output.</p>
+<p>We will also have REFERENCES - ground truths.</p>
+<p>We will have a matrix (context may or not exist):</p>
+<p>INPUT - OUTPUT - CONTEXT - REFERENCE</p>
+<p>We can then work out an evaluation.</p>
+<p>We look for OMISSIONS - ADDITIONS - CONTRADICTIONS - COMPLETENESS as alternatives to traditonal F1 scores although these can be computed as well.</p>
+<p><img alt="Agentic Evaluation" src="images/evaluating-ai-agents-2.png" /></p>
+<h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h2>
+<p>Our goal is to get a number of datasets:</p>
+<p>INPUT - OUTPUT - CONTEXT - REFERENCE</p>
+<p>TOOL_CALLED - ARGUMENTS - NEXT - EXPECTED</p>
+<p>Oncce we have these there are many libraries or our own custom evaluations that we can use.</p>
+<h2 id="friction">Friction<a class="headerlink" href="#friction" title="Permanent link">&para;</a></h2>
+<p>The process needs to be frictionless for developers.</p>
+<p>At an accessability talk, the speaker said 'How do you make a blueberry muffin?'. </p>
+<p>You put the blueberries in at the beginning and not stuff them in at the end.</p>
+<p>This has been a priority in developing this Agentic Testing Framework.</p>
 
 
 
