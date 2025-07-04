@@ -53,7 +53,7 @@ INPUT - OUTPUT - CONTEXT - REFERENCE
 
 TOOL_CALLED - ARGUMENTS - NEXT - EXPECTED
 
-Oncce we have these there are many libraries or our own custom evaluations that we can use.
+Once we have these there are many libraries or our own custom evaluations that we can use.
 
 ## Friction
 
