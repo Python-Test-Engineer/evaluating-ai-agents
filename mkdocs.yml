@@ -10,14 +10,14 @@ theme:
   name: "material" # readthedocs
   palette:
     - media: "(prefers-color-scheme: light)"
-      primary: "pink"
+      primary: "blue"
       accent: "grey"
       scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
-      primary: "pink"
+      primary: "blue"
       accent: "white"
       scheme: slate
       toggle:
@@ -64,10 +64,12 @@ markdown_extensions:
 nav:
   - "About": "index.md"
   - "Evaluation":
-      - "Overview": "evaluation/overview.md"
+      - "PyTest Full Stack": "evaluation/pytest_full_stack.md"
+      - "Libraries": "evaluation/libraries.md"
       - "LLM as Judge": "evaluation/rate_with_llm.md"
       - "Domain Expert": "evaluation/domain_expert.md"
       - "Refine": "evaluation/refine.md"
+      - "Examples": "evaluation/examples.md"
 
   - "About Craig":
       - "Services": "craig/services.md"
