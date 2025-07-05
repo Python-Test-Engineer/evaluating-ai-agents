@@ -65,6 +65,7 @@ nav:
   - "Preamble": "index.md"
   - "About": "about.md"
   - "Evaluation":
+      - "Overview": "evaluation/overview.md"
       - "PyTest Full Stack": "evaluation/pytest_full_stack.md"
       - "Libraries": "evaluation/libraries.md"
       - "LLM as Judge": "evaluation/rate_with_llm.md"
