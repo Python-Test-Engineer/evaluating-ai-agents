@@ -19,3 +19,7 @@ Below we can see how tracing/logging is part of the development process that wil
 ![Log](./images/example_log_print.png)
 <span style="color:#E72107;">
 *We test, evaluate and monitor to ensure our client's needs and wants are met.*</span>
+
+## Evaluation Driven Development
+
+If we consider our whole app to be a molecule based on a number of atoms, we use EDD to build in evaluations so that development and production can benefit from immediate feedback.
