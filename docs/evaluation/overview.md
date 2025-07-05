@@ -27,6 +27,7 @@ CORE DATA:
 
 (some optional)
 
+- ENVIRONMENT (dev/staging/prod)
 - DATETIME
 - TRACE
 - SPAN
