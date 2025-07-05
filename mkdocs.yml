@@ -62,7 +62,8 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - "About": "index.md"
+  - "Preamble": "index.md"
+  - "About": "about.md"
   - "Evaluation":
       - "PyTest Full Stack": "evaluation/pytest_full_stack.md"
       - "Libraries": "evaluation/libraries.md"
