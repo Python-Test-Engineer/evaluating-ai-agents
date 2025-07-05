@@ -343,6 +343,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -352,6 +363,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#evaluations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scoping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telemetry
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -433,27 +490,6 @@
   
   <span class="md-ellipsis">
     Domain Expert
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../refine/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Refine
   </span>
   
 
@@ -637,6 +673,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#evaluations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scoping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telemetry
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -651,9 +722,54 @@
 
 
 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<h2 id="evaluations">Evaluations<a class="headerlink" href="#evaluations" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
 <p>Code based - traditional testing</p>
-<p>LLM as Judge - specialist LLMs to rate tone, completeness, no PII, matrix analysis of input-output-contentext-reference.</p>
+</li>
+<li>
+<p>LLM as Judge - specialist LLMs to rate tone, completeness, no PII, matrix analysis, gender bias etc as well as the confusion matrix of input-output-context-reference.</p>
+</li>
+<li>
+<p>ML analysis - we may use ML models to compute a metric.</p>
+</li>
+<li>
 <p>Human Annotations.</p>
+</li>
+</ol>
+<h2 id="scoping">Scoping<a class="headerlink" href="#scoping" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Trace - the run</li>
+<li>Span - items within the run</li>
+</ul>
+<p><img alt="trace-span" src="../../images/trace-span.png" /></p>
+<!-- <img src="../images/trace-span.png" width="600px"> -->
+
+<h2 id="telemetry">Telemetry<a class="headerlink" href="#telemetry" title="Permanent link">&para;</a></h2>
+<p>CORE DATA:</p>
+<p>(some optional)</p>
+<ul>
+<li>DATETIME</li>
+<li>TRACE</li>
+<li>SPAN</li>
+<li>MODEL</li>
+<li>MODEL_KWARGS (temperature etc)</li>
+<li>INPUT</li>
+<li>OUTPUT</li>
+<li>CONTEXT</li>
+<li>TOOL_CALL</li>
+<li>TOOL_INPUT</li>
+<li>TOOL_OUTPUT</li>
+</ul>
+<p>(custom data)
+- WHAT_DEV_ADDS</p>
+<p>These are CSVs appropriately named, that will have REFERENCE ground truth added to provide an dataset for analysis.</p>
+<p>There are a number of libraries I like:</p>
+<ol>
+<li>Evidently AI</li>
+<li>Deep Eval</li>
+<li>RAGAS</li>
+</ol>
 
 
 
