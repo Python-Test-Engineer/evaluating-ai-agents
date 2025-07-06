@@ -44,11 +44,11 @@ The editor agent then decides if it is in German, of correct length, sensational
 
 One fundamental pattern is ROUTING - does the Agent select the correct tool/function/skill with the correct inputs?
 
-`src\article_writer_langgraph.py` shows the routing pattern for `system_grader` and the log output is in article_writer.csv:
+`src\article_writer_langgraph.py` shows the routing pattern for `system_grader` and the log output is in `article_writer.csv`:
 
 ![article-writer-evaluator](./images/article-writer-evaluator.png)
 
-`ArticlePostabilityGrader` logs to `article_writer_can_publish` (we can have just one log file):
+`ArticlePostabilityGrader` logs to `article_writer_can_publish.csv` (we can have just one log file):
 
 ![article-writer-evaluator](./images/article-writer-publisher.png)
 
