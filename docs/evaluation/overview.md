@@ -1,5 +1,8 @@
 # Overview
 
+> "How do you make a blueberry muffin? You put the blueberries in at start not stuff them in at end." - Accessibility speaker.
+
+It is part of the development lifecycle supporting the developer and all othe rstake holders.
 
 ## Evaluations
 
@@ -10,6 +13,12 @@
 3. ML analysis - we may use ML models to compute a metric.
 
 4. Human Annotations.
+
+Start with Human Evals and scale with LLM Judge.
+
+System fails:
+
+![Fails](../images/system-fails.png)
 
 ## Scoping
 
