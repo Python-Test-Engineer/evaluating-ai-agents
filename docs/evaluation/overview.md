@@ -4,6 +4,8 @@
 
 It is part of the development lifecycle supporting the developer and all othe rstake holders.
 
+![eval-cycle](../images/eval-cycle.png)
+
 ## Evaluations
 
 1. Code based - traditional testing
