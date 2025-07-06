@@ -506,11 +506,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
+      <a href="../eval_framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Examples
+    Eval Framework
   </span>
   
 
@@ -742,9 +742,10 @@
 <p>Human Annotations.</p>
 </li>
 </ol>
-<p>Start with Human Evals and scale with LLM Judge.</p>
-<p>System fails:</p>
-<p><img alt="Fails" src="../../images/system-fails.png" /></p>
+<p>Start with Human Evals and scale with LLM Judge. This seems the top recommendation from those in the field.</p>
+<p>Human evals will reveal what we need to test.</p>
+<p>LLM Judge will enable scaling - we ask the LLM for its reasoning for its grade. </p>
+<p>The experts say this will reveal many things, notably whether the LLM and us are not on the same page in the evaluation process. We can then change the prompt.</p>
 <h2 id="scoping">Scoping<a class="headerlink" href="#scoping" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Trace - the run</li>
@@ -755,9 +756,14 @@
 
 <h2 id="telemetry">Telemetry<a class="headerlink" href="#telemetry" title="Permanent link">&para;</a></h2>
 <p>CORE DATA:</p>
-<p>(some optional)</p>
 <ul>
-<li>ENVIRONMENT (dev/staging/prod)</li>
+<li>Some of these are optional</li>
+<li>
+<p>We may use a code to identify the unit under test, e.g <code>app_unit_test_type</code></p>
+</li>
+<li>
+<p>ENVIRONMENT (dev/staging/prod)</p>
+</li>
 <li>DATETIME</li>
 <li>TRACE</li>
 <li>SPAN</li>
@@ -772,10 +778,10 @@
 </ul>
 <p>(custom data)
 - WHAT_DEV_ADDS</p>
-<p>These are CSVs appropriately named, that will have REFERENCE ground truth added to provide an dataset for analysis.</p>
+<p>These CSVs are appropriately named and will then have REFERENCE ground truth added to provide an dataset for analysis.</p>
 <p>There are a number of libraries I like:</p>
 <ol>
-<li>Evidently AI</li>
+<li>Evidently AI - favourite of mine as it made Evals easy and enjoyable.</li>
 <li>Deep Eval</li>
 <li>RAGAS</li>
 </ol>

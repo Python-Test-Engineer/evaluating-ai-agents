@@ -2,7 +2,7 @@
 
 ## Aim
 
-This is a manual to establish EvalOps - a way of testing and evaluating Agentic systems.
+This is a manual to establish a fricitonless way of testing and evaluating Agentic systems both for the developer and QA.
 
 ## Agentic Evaluations
 
@@ -45,6 +45,8 @@ The editor agent then decides if it is in German, of correct length, sensational
 One fundamental pattern is ROUTING - does the Agent select the correct tool/function/skill with the correct inputs?
 
 ![Agentic Evaluation](./images/evaluating-ai-agents-1.png)
+![Agentic Evaluation](./images/evaluating-ai-agents-2.png)
+![Agentic Evaluation](./images/evaluating-ai-agents-3.png)
 
 There is also NEXT - does the Agent select the correct next step where this is applicable?
 
@@ -58,18 +60,6 @@ We may retrieve additonal context to support the generation of the output.
 
 We will also have REFERENCES - ground truths.
 
-We will have a matrix (context may or not exist):
-
-INPUT - OUTPUT - CONTEXT - REFERENCE
-
-We can then work out an evaluation.
-
-We look for OMISSIONS - ADDITIONS - CONTRADICTIONS - COMPLETENESS as alternatives to traditonal F1 scores although these can be computed as well.
-
-![Agentic Evaluation](./images/evaluating-ai-agents-2.png)
-
-## Datasets
-
 Our goal is to get a number of datasets:
 
 INPUT - OUTPUT - CONTEXT - REFERENCE
@@ -77,6 +67,19 @@ INPUT - OUTPUT - CONTEXT - REFERENCE
 TOOL_CALLED - ARGUMENTS - NEXT - EXPECTED
 
 Once we have these there are many libraries or our own custom evaluations that we can use.
+
+We will have a confusion matrix (context may or not exist):
+
+INPUT - OUTPUT - CONTEXT - REFERENCE
+
+We can then work out an evaluation.
+
+We look for OMISSIONS - ADDITIONS - CONTRADICTIONS - COMPLETENESS as alternatives to traditonal F1 scores although these can be computed as well.
+
+We can also evaluate system fails:
+
+![system-fails](../images/system-fails.png)
+
 
 ## Frictionless
 
@@ -107,4 +110,6 @@ Additional data can be added optionally in a structured way.
 This serves as testing, evaluationg and monitoring from development to production.
 
 The developer and QA work towards making each UNIT fully introspective.
+
+*Having researched the various Observability tools, I think this logging approach is the simplest and possibly most effective as it separates data collection and data evaluation, and also avoids being tied to any framework.*
 

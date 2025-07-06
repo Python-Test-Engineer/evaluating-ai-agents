@@ -7,3 +7,20 @@ This technique might be used by developers to improve the knowledge system as th
 This is more of a development tool rather than final evalauation.
 
 [Useful article](https://medium.com/towards-generative-ai/judgeit-automating-rag-evaluation-using-llm-as-a-judge-d7c10b3f2eeb)
+
+## Uses
+
+Some example additional uses:
+
+- Politeness: Is the response respectful and considerate?
+- Bias: Does the response show prejudice towards a particular group?
+- Tone: Is the tone formal, friendly, or conversational?
+- Sentiment: is the emotion expressed in the text positive, negative or neutral?
+- Hallucinations: Does this response stick to the provided context?
+- Adversarial: We can test it does NOT do things as well as test edge cases.
+
+By asking for not just the grade but its reasoning, we can get a more complete picture of how the judge is evaluating the LLM.
+
+Code demo:
+
+![llm as judge](../images/llm-as-judge-code-files.png)
