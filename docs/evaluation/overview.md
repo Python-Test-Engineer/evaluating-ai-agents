@@ -67,3 +67,6 @@ There are a number of libraries I like:
 2. Deep Eval
 3. RAGAS
 
+## Common mistakes
+
+![common-mistakes](../images/common-mistakes.png)
