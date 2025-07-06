@@ -16,11 +16,15 @@ It is part of the development lifecycle supporting the developer and all othe rs
 
 4. Human Annotations.
 
-Start with Human Evals and scale with LLM Judge.
+Start with Human Evals and scale with LLM Judge. This seems the top recommendation from those in the field.
 
-System fails:
+Human evals will reveal what we need to test.
 
-![Fails](../images/system-fails.png)
+LLM Judge will enable scaling - we ask the LLM for its reasoning for its grade. 
+
+The experts say this will reveal many things, notably whether the LLM and us are not on the same page in the evaluation process. We can then change the prompt.
+
+
 
 ## Scoping
 
@@ -36,7 +40,8 @@ System fails:
 
 CORE DATA:
 
-(some optional)
+- Some of these are optional
+- We may use a code to identify the unit under test, e.g `app_unit_test_type`
 
 - ENVIRONMENT (dev/staging/prod)
 - DATETIME
@@ -54,13 +59,16 @@ CORE DATA:
 (custom data)
 - WHAT_DEV_ADDS
 
-These are CSVs appropriately named, that will have REFERENCE ground truth added to provide an dataset for analysis.
+These CSVs are appropriately named and will then have REFERENCE ground truth added to provide an dataset for analysis.
 
 *We can also run evals with no references.* We use LLM as judge to determine the eval.
 
 There are a number of libraries I like:
 
-1. Evidently AI
+1. Evidently AI - favourite of mine as it made Evals easy and enjoyable.
 2. Deep Eval
 3. RAGAS
 
+## Common mistakes
+
+![common-mistakes](../images/common-mistakes.png)

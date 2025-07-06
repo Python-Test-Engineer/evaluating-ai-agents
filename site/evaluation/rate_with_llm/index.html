@@ -406,6 +406,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    LLM as Judge
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -415,6 +426,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uses
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -449,11 +488,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
+      <a href="../eval_framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Examples
+    Eval Framework
   </span>
   
 
@@ -616,6 +655,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uses
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -634,6 +690,19 @@
 <p>This technique might be used by developers to improve the knowledge system as they work on it rather than getting human evaluations at every step.</p>
 <p>This is more of a development tool rather than final evalauation.</p>
 <p><a href="https://medium.com/towards-generative-ai/judgeit-automating-rag-evaluation-using-llm-as-a-judge-d7c10b3f2eeb">Useful article</a></p>
+<h2 id="uses">Uses<a class="headerlink" href="#uses" title="Permanent link">&para;</a></h2>
+<p>Some example additional uses:</p>
+<ul>
+<li>Politeness: Is the response respectful and considerate?</li>
+<li>Bias: Does the response show prejudice towards a particular group?</li>
+<li>Tone: Is the tone formal, friendly, or conversational?</li>
+<li>Sentiment: is the emotion expressed in the text positive, negative or neutral?</li>
+<li>Hallucinations: Does this response stick to the provided context?</li>
+<li>Adversarial: We can test it does NOT do things as well as test edge cases.</li>
+</ul>
+<p>By asking for not just the grade but its reasoning, we can get a more complete picture of how the judge is evaluating the LLM.</p>
+<p>Code demo:</p>
+<p><img alt="llm as judge" src="../../images/llm-as-judge-code-files.png" /></p>
 
 
 

@@ -383,15 +383,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#datasets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Datasets
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#frictionless" class="md-nav__link">
     <span class="md-ellipsis">
       Frictionless
@@ -555,11 +546,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../evaluation/examples/" class="md-nav__link">
+      <a href="../evaluation/eval_framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Examples
+    Eval Framework
   </span>
   
 
@@ -789,15 +780,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#datasets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Datasets
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#frictionless" class="md-nav__link">
     <span class="md-ellipsis">
       Frictionless
@@ -823,7 +805,7 @@
 
 <h1 id="evaluating_ai_agents">Evaluating AI Agents<a class="headerlink" href="#evaluating_ai_agents" title="Permanent link">&para;</a></h1>
 <h2 id="aim">Aim<a class="headerlink" href="#aim" title="Permanent link">&para;</a></h2>
-<p>This is a manual to establish EvalOps - a way of testing and evaluating Agentic systems.</p>
+<p>This is a manual to establish a fricitonless way of testing and evaluating Agentic systems both for the developer and QA.</p>
 <h2 id="agentic_evaluations">Agentic Evaluations<a class="headerlink" href="#agentic_evaluations" title="Permanent link">&para;</a></h2>
 <!-- We can see an Agentic workflow:
 
@@ -849,23 +831,25 @@
 <h2 id="patterns">Patterns<a class="headerlink" href="#patterns" title="Permanent link">&para;</a></h2>
 <h3 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h3>
 <p>One fundamental pattern is ROUTING - does the Agent select the correct tool/function/skill with the correct inputs?</p>
-<p><img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-1.png" /></p>
+<p><img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-1.png" />
+<img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-2.png" />
+<img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-3.png" /></p>
 <p>There is also NEXT - does the Agent select the correct next step where this is applicable?</p>
 <p><img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-4.png" /></p>
 <h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
 <p>For a given input, we will obtain an output. </p>
 <p>We may retrieve additonal context to support the generation of the output.</p>
 <p>We will also have REFERENCES - ground truths.</p>
-<p>We will have a matrix (context may or not exist):</p>
-<p>INPUT - OUTPUT - CONTEXT - REFERENCE</p>
-<p>We can then work out an evaluation.</p>
-<p>We look for OMISSIONS - ADDITIONS - CONTRADICTIONS - COMPLETENESS as alternatives to traditonal F1 scores although these can be computed as well.</p>
-<p><img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-2.png" /></p>
-<h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h2>
 <p>Our goal is to get a number of datasets:</p>
 <p>INPUT - OUTPUT - CONTEXT - REFERENCE</p>
 <p>TOOL_CALLED - ARGUMENTS - NEXT - EXPECTED</p>
 <p>Once we have these there are many libraries or our own custom evaluations that we can use.</p>
+<p>We will have a confusion matrix (context may or not exist):</p>
+<p>INPUT - OUTPUT - CONTEXT - REFERENCE</p>
+<p>We can then work out an evaluation.</p>
+<p>We look for OMISSIONS - ADDITIONS - CONTRADICTIONS - COMPLETENESS as alternatives to traditonal F1 scores although these can be computed as well.</p>
+<p>We can also evaluate system fails:</p>
+<p><img alt="system-fails" src="../images/system-fails.png" /></p>
 <h2 id="frictionless">Frictionless<a class="headerlink" href="#frictionless" title="Permanent link">&para;</a></h2>
 <p>The process needs to be frictionless for developers.</p>
 <p>At an accessability talk, the speaker said 'How do you make a blueberry muffin?'. </p>
@@ -886,6 +870,7 @@ The core tracing is for datetime|component|model|temperature|input|output</p>
 <p>Additional data can be added optionally in a structured way.</p>
 <p>This serves as testing, evaluationg and monitoring from development to production.</p>
 <p>The developer and QA work towards making each UNIT fully introspective.</p>
+<p><em>Having researched the various Observability tools, I think this logging approach is the simplest and possibly most effective as it separates data collection and data evaluation, and also avoids being tied to any framework.</em></p>
 
 
 

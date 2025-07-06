@@ -70,7 +70,7 @@ nav:
       - "Libraries": "evaluation/libraries.md"
       - "LLM as Judge": "evaluation/rate_with_llm.md"
       - "Domain Expert": "evaluation/domain_expert.md"
-      - "Examples": "evaluation/examples.md"
+      - "Eval Framework": "evaluation/eval_framework.md"
 
   - "About Craig":
       - "Services": "craig/services.md"
