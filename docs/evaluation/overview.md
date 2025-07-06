@@ -61,6 +61,8 @@ CORE DATA:
 
 These CSVs are appropriately named and will then have REFERENCE ground truth added to provide an dataset for analysis.
 
+*We can also run evals with no references.* We use LLM as judge to determine the eval.
+
 There are a number of libraries I like:
 
 1. Evidently AI - favourite of mine as it made Evals easy and enjoyable.
