@@ -831,9 +831,16 @@
 <h2 id="patterns">Patterns<a class="headerlink" href="#patterns" title="Permanent link">&para;</a></h2>
 <h3 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h3>
 <p>One fundamental pattern is ROUTING - does the Agent select the correct tool/function/skill with the correct inputs?</p>
-<p><img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-1.png" />
+<p><code>src\article_writer_langgraph.py</code> shows the routing pattern for <code>system_grader</code> and the log output is in article_writer.csv:</p>
+<p><img alt="article-writer-evaluator" src="../images/article-writer-evaluator.png" /></p>
+<p><code>ArticlePostabilityGrader</code> logs to <code>article_writer_can_publish</code> (we can have just one log file):</p>
+<p><img alt="article-writer-evaluator" src="../images/article-writer-publisher.png" /></p>
+<blockquote>
+<p>In general: 
+<img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-1.png" />
 <img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-2.png" />
 <img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-3.png" /></p>
+</blockquote>
 <p>There is also NEXT - does the Agent select the correct next step where this is applicable?</p>
 <p><img alt="Agentic Evaluation" src="../images/evaluating-ai-agents-4.png" /></p>
 <h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>

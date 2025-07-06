@@ -44,6 +44,15 @@ The editor agent then decides if it is in German, of correct length, sensational
 
 One fundamental pattern is ROUTING - does the Agent select the correct tool/function/skill with the correct inputs?
 
+`src\article_writer_langgraph.py` shows the routing pattern for `system_grader` and the log output is in article_writer.csv:
+
+![article-writer-evaluator](./images/article-writer-evaluator.png)
+
+`ArticlePostabilityGrader` logs to `article_writer_can_publish` (we can have just one log file):
+
+![article-writer-evaluator](./images/article-writer-publisher.png)
+
+> In general: 
 ![Agentic Evaluation](./images/evaluating-ai-agents-1.png)
 ![Agentic Evaluation](./images/evaluating-ai-agents-2.png)
 ![Agentic Evaluation](./images/evaluating-ai-agents-3.png)
@@ -78,7 +87,7 @@ We look for OMISSIONS - ADDITIONS - CONTRADICTIONS - COMPLETENESS as alternative
 
 We can also evaluate system fails:
 
-![system-fails](../images/system-fails.png)
+![system-fails](./images/system-fails.png)
 
 
 ## Frictionless
