@@ -72,6 +72,8 @@ nav:
       - "LLM as Judge": "evaluation/rate_with_llm.md"
       - "Domain Expert": "evaluation/domain_expert.md"
       - "Eval Framework": "evaluation/eval_framework.md"
+  - "Case Study":
+      - "Overview": "case_study/about.md"
 
   - "About Craig":
       - "Services": "craig/services.md"
