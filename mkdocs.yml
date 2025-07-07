@@ -62,7 +62,8 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - "Preamble": "index.md"
+  - "TLDR": "index.md"
+  - "Preamble": "preamble.md"
   - "About": "about.md"
   - "Evaluation":
       - "Overview": "evaluation/overview.md"
