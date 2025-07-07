@@ -12,7 +12,7 @@
       
       
       
-        <link rel="next" href="about/">
+        <link rel="next" href="preamble/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the_agentic_paradigm" class="md-skip">
+        <a href="#tldr" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Preamble
+              TLDR
             
           </span>
         </div>
@@ -264,18 +264,28 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
+      <a href="." class="md-nav__link md-nav__link--active">
+        
   
   <span class="md-ellipsis">
-    Preamble
+    TLDR
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      </a>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="preamble/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -284,35 +294,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#evaluation_driven_development" class="md-nav__link">
-    <span class="md-ellipsis">
-      Evaluation Driven Development
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -351,10 +332,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -365,8 +346,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Evals
           </label>
@@ -519,10 +500,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -533,8 +514,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             About Craig
           </label>
@@ -651,23 +632,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#evaluation_driven_development" class="md-nav__link">
-    <span class="md-ellipsis">
-      Evaluation Driven Development
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -681,18 +645,22 @@
                   
 
 
-<h1 id="the_agentic_paradigm">The Agentic Paradigm<a class="headerlink" href="#the_agentic_paradigm" title="Permanent link">&para;</a></h1>
-<p>Traditionally, testing is focussed on ensuring the pipelines of the factory works correctly.</p>
-<p>It does not focus on the quality of content produced.</p>
+<h1 id="tldr">TLDR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h1>
+<p>Agents/tools are (mathematically) a function with:</p>
+<ul>
+<li>input</li>
+<li>output</li>
+<li>context (optionally)</li>
+<li>metadata (model, temperature, etc.)</li>
+</ul>
+<p>Each Agent contains its own <strong>self-evaluation</strong> by exporting the above to a CSV that can then be analysed using a range of Eval Libraries like Evidently, DeepEval and Ragas.</p>
+<p><img alt="Log" src="images/example_log_print.png" /></p>
 <blockquote>
-<p>Logging/tracing, rather than unit and integration tests, are of more value here. It can often be a challenge to create tests for Agentic Systems based on agentic pipelines being different to tradional ones.</p>
+<p>Decouple app code and evaluation code.</p>
+<p>Portable Agent/Eval combinations.</p>
+<p>Evals are real time and support both developer and QA.</p>
+<p>Frictionless integration to existing apps and new ones.</p>
 </blockquote>
-<p>Below we can see how tracing/logging is part of the development process that will assist the developer and end user.</p>
-<p><img alt="Log" src="images/example_log_print.png" />
-<span style="color:#E72107;">
-<em>We test, evaluate and monitor to ensure our client's needs and wants are met.</em></span></p>
-<h2 id="evaluation_driven_development">Evaluation Driven Development<a class="headerlink" href="#evaluation_driven_development" title="Permanent link">&para;</a></h2>
-<p>If we consider our whole app to be a molecule based on a number of atoms, we use EDD to build in evaluations so that development and production can benefit from immediate feedback.</p>
 
 
 
