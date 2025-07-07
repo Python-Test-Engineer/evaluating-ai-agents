@@ -64,7 +64,7 @@ markdown_extensions:
 nav:
   - "Preamble": "index.md"
   - "About": "about.md"
-  - "Evaluation":
+  - "Evals":
       - "Overview": "evaluation/overview.md"
       - "PyTest Full Stack": "evaluation/pytest_full_stack.md"
       - "Libraries": "evaluation/libraries.md"
