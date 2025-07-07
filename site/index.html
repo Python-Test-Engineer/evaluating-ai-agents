@@ -653,10 +653,14 @@
 <li>context (optionally)</li>
 <li>metadata (model, temperature, etc.)</li>
 </ul>
-<p>Each Agent contains its own <strong>self-evaluation</strong> by exporting the above to a CSV that can then be analysed using a range of Eval Libraries like Evidently, DeepEval and Ragas.</p>
+<p>Each Agent contains its own <strong>self-evaluation</strong> by exporting the above to a CSV that can then be analysed using a range of Eval Libraries like Evidently, DeepEval and Ragas with or without references (ground truths).</p>
 <p><img alt="Log" src="images/example_log_print.png" /></p>
 <blockquote>
-<p>Decouple app code and evaluation code.</p>
+<p>Add REFERENCE column to dataset and then do evals.</p>
+</blockquote>
+<p>Advantages:</p>
+<blockquote>
+<p>Decouples app code and evaluation code.</p>
 <p>Portable Agent/Eval combinations.</p>
 <p>Evals are real time and support both developer and QA.</p>
 <p>Frictionless integration to existing apps and new ones.</p>
