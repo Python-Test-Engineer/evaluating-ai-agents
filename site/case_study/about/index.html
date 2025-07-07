@@ -531,6 +531,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -540,6 +551,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    <span class="md-ellipsis">
+      App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first_steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      First steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -699,6 +747,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    <span class="md-ellipsis">
+      App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first_steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      First steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -713,9 +787,21 @@
 
 
 <h1 id="case_study">Case Study<a class="headerlink" href="#case_study" title="Permanent link">&para;</a></h1>
+<h2 id="app">App<a class="headerlink" href="#app" title="Permanent link">&para;</a></h2>
 <p>This is a case study using a Deep Research clone app by Kody Simpson.</p>
+<p>The repo is <a href="https://github.com/Python-Test-Engineer/llm-evaluation-framework">https://github.com/Python-Test-Engineer/llm-evaluation-framework</a></p>
 <p>Located in src/deep_research it uses the OpenAI Agent SDK.</p>
 <p>It enables us to use an actual app to set up Evals.</p>
+<p><code>uv run ./src/deep_research/main.py</code></p>
+<h2 id="first_steps">First steps<a class="headerlink" href="#first_steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li>What does a satisified user look like?</li>
+<li>What would a disappointed user look like?</li>
+<li>How do we define a successful app from our point of view?</li>
+</ul>
+<p>We need to make each agent self-evaluating. That is, we need to export to CSV input|output|context|tool_use|metadata.</p>
+<p>Then we can add references if we have them and run our evals.</p>
+<p>We will do this manually to get a sense of what we need to implement and if possible scale up with automations and LLM as judge.</p>
 
 
 
