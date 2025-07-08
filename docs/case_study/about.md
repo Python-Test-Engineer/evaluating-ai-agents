@@ -21,7 +21,7 @@ We will do this manually to get a sense of what we need to implement and if poss
 
 ### Langgraph
 
-In this first case study, we use a sample Langgraph app located in `src/case_study/app_article_writer.py`
+In this first case study, we use a sample Langgraph app located in `src/case_study1/langgraph/app_article_writer.py`
 
 Evals where done after the app was built so we idendify the Agentic points where we use LLMs and then apply logging.
 
