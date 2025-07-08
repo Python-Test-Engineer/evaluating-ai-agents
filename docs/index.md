@@ -1,5 +1,10 @@
 # TLDR
 
+## Two parts
+
+1. Observability by tracing/logging out data.
+2. Perfroming evals on these datasets.
+
 Agents/tools are (mathematically) a function with:
 
 - input
