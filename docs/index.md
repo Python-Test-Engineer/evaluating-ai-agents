@@ -12,7 +12,7 @@ Agents/tools are (mathematically) a function with:
 - context (optionally)
 - metadata (model, temperature, etc.)
 
-Each Agent has its own **observability** by exporting the above to a CSV that can then be analysed using a range of Eval Libraries like Evidently, DeepEval and Ragas, with or without references (ground truths).
+Each Agent has its own **self-reflection** by exporting the above to a CSV that can then be analysed using a range of Eval Libraries like Evidently, DeepEval and Ragas, with or without references (ground truths).
 
 ![Log](./images/example_log_print.png)
 
