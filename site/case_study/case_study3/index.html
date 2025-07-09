@@ -797,7 +797,20 @@
 
 
 <h1 id="case_study_3">Case Study 3<a class="headerlink" href="#case_study_3" title="Permanent link">&para;</a></h1>
-<p>More detailed information as needed will be added here...</p>
+<p>The module <code>tool_calling.py</code> has 4 tools and they form pairs to test multiple tool calling in a sequence.</p>
+<p>TOOL 1:
+- get weather (fake api) gets weather for a city.</p>
+<p>TOOL 2:
+- Checks for seating availablity</p>
+<p>These two answer the question: 'What is the temperature in Munich and are there seats indoors/outdoors available'</p>
+<p>PARALLEL tool calls.</p>
+<p>TOOL 3:
+- Converts Centigrade to Fahrenhiet</p>
+<p>TOOL 4:
+- For a given temperature in F, gives a lable of COLD, MILD, WARM or HOT.</p>
+<p>Tools 3 and 4 are sequential in answering the question 'What is 12C in Fahrenheit and give me the label/description of that temperature'</p>
+<p>SEQUENTIAL tool calls.</p>
+<p>Of course, this could be just one tool but this is a demo of sequential tool calling and checking correct tools and arguments are used as well as giving the correct outputs.</p>
 
 
 
