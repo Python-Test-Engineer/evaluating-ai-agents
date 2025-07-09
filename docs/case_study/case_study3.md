@@ -10,7 +10,7 @@ TOOL 2:
 
 These two answer the question: 'What is the temperature in Munich and are there seats indoors/outdoors available'
 
-PARALLEL tool calls.
+PARALLEL/INDEPENDENT tool calls.
 
 TOOL 3:
 - Converts Centigrade to Fahrenhiet
@@ -20,6 +20,6 @@ TOOL 4:
 
 Tools 3 and 4 are sequential in answering the question 'What is 12C in Fahrenheit and give me the label/description of that temperature'
 
-SEQUENTIAL tool calls.
+SEQUENTIAL/DEPENDENT tool calls.
 
 Of course, this could be just one tool but this is a demo of sequential tool calling and checking correct tools and arguments are used as well as giving the correct outputs.
