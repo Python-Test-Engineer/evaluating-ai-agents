@@ -6,6 +6,9 @@ It is part of the development lifecycle supporting the developer and all othe rs
 
 ![eval-cycle](../images/eval-cycle.png)
 
+It is most useful to ask stakeholders what is important to them and how they will assess the effectivenes of the Agent.
+
+
 ## Evaluations
 
 1. Code based - traditional testing
@@ -16,6 +19,8 @@ It is part of the development lifecycle supporting the developer and all othe rs
 
 4. Human Annotations.
 
+Numerical evals are hard for LLMs so we use more qualitative measures.
+
 Start with Human Evals and scale with LLM Judge. This seems the top recommendation from those in the field.
 
 Human evals will reveal what we need to test.
@@ -24,6 +29,7 @@ LLM Judge will enable scaling - we ask the LLM for its reasoning for its grade.
 
 The experts say this will reveal many things, notably whether the LLM and us are not on the same page in the evaluation process. We can then change the prompt.
 
+Getting judge to give its reasoning is vital to check judging is on the mark.
 
 
 ## Scoping
@@ -68,6 +74,10 @@ There are a number of libraries I like:
 1. Evidently AI - favourite of mine as it made Evals easy and enjoyable.
 2. Deep Eval
 3. RAGAS
+
+## LLM as Jury
+
+LLM as a jury involves using large language models to simulate jury decision-making processes, evaluating evidence and reaching verdicts like human juries, though with significant limitations around bias and moral reasoning.
 
 ## Common mistakes
 

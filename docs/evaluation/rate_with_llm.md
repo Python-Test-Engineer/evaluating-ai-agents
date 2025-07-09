@@ -6,6 +6,9 @@ This technique might be used by developers to improve the knowledge system as th
 
 This is more of a development tool rather than final evalauation.
 
+
+Arxiv Paper: [https://arxiv.org/pdf/2412.05579](https://arxiv.org/pdf/2412.05579)
+
 [Useful article](https://medium.com/towards-generative-ai/judgeit-automating-rag-evaluation-using-llm-as-a-judge-d7c10b3f2eeb)
 
 ## Uses
@@ -23,4 +26,14 @@ By asking for not just the grade but its reasoning, we can get a more complete p
 
 Code demo:
 
-![llm as judge](../images/llm-as-judge-code-files.png)
+![llm as judge](../images/llm_judge/llm-as-judge-code-files.png)
+
+> Examples
+
+[https://www.youtube.com/watch?v=LZJTrAXcyFM](https://www.youtube.com/watch?v=LZJTrAXcyFM)
+
+![llm as judge](../images/llm_judge/llm-as-judge-single-mulitple-items.png)
+
+![llm as judge](../images/llm_judge/llm-judge-criteria.png)
+
+![llm as judge](../images/llm_judge/llm-judge-limitations.png)
