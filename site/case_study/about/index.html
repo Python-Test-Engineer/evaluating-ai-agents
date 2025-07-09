@@ -14,7 +14,7 @@
         <link rel="prev" href="../../evaluation/eval_framework/">
       
       
-        <link rel="next" href="../../craig/services/">
+        <link rel="next" href="../case_study1/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -501,7 +501,7 @@
             
   
   <span class="md-ellipsis">
-    Case Study
+    Case Studies
   </span>
   
 
@@ -511,7 +511,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Case Study
+            Case Studies
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -619,6 +619,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#evaluating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluating
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case_study_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study 3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Study 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tool_calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool calling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluations
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -628,6 +670,90 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_study1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Langgraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_study2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenAI Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_study3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tool calling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evidentlyai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evals
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -844,6 +970,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#evaluating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluating
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case_study_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study 3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Study 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tool_calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool calling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluations
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -884,15 +1052,34 @@
 <p>EVAL01:</p>
 <p><img alt="eval01" src="../../images/case_study_1_eval01.png" /></p>
 <p>We log to <code>01_article_writer_should_write.csv</code> and do the same for the other 3 evals.</p>
-<p>We also do the same for <code>tool_calling.py</code>, logging to <code>05_tool_calling.csv</code>.</p>
 <h2 id="case_study_2">Case Study 2<a class="headerlink" href="#case_study_2" title="Permanent link">&para;</a></h2>
 <h3 id="openai_agents">OpenAI Agents<a class="headerlink" href="#openai_agents" title="Permanent link">&para;</a></h3>
 <p>This is a case study using a Deep Research clone app by Kody Simpson.</p>
-<p>I coded up the app so that logging could be done in development rather than in QA.</p>
+<p>I coded it up without the 'Follow up' on research items.</p>
 <p>The repo is <a href="https://github.com/Python-Test-Engineer/llm-evaluation-framework">https://github.com/Python-Test-Engineer/llm-evaluation-framework</a></p>
-<p>Located in src/case_study/deep_research it uses the OpenAI Agent SDK.</p>
+<p>Located in src/case_study2/deep_research it uses the OpenAI Agent SDK.</p>
 <p>It enables us to use an actual app to set up Evals.</p>
 <p><code>uv run ./src/deep_research/main.py</code></p>
+<h3 id="evaluating">Evaluating<a class="headerlink" href="#evaluating" title="Permanent link">&para;</a></h3>
+<p>With the app is we will go through a generic sequence of how we carry out evals:</p>
+<ol>
+<li>What does the end user want?</li>
+<li>How can we evaluate and monitor to ensure our client's needs and wants are met?</li>
+<li>What and where do we log?</li>
+</ol>
+<h2 id="case_study_3">Case Study 3<a class="headerlink" href="#case_study_3" title="Permanent link">&para;</a></h2>
+<h3 id="tool_calling">Tool calling<a class="headerlink" href="#tool_calling" title="Permanent link">&para;</a></h3>
+<p>We have a separate case study for tool calling to avoid cluttering the other case studies.</p>
+<p>We want the end branch of our app where we have the lass Agentic component.</p>
+<p>We can then combine all case studies as sub graphs.</p>
+<h3 id="evaluations">Evaluations<a class="headerlink" href="#evaluations" title="Permanent link">&para;</a></h3>
+<p>For tool calling we want to evaluate:</p>
+<ol>
+<li>Was the right tool called for the right input?</li>
+<li>Were the arguments correct?</li>
+<li>Did the tool produce the right output?</li>
+</ol>
+<p>If the tool uses another agentic function the we would evaluate that subgraph but in our case study we are not using any agentic subgraphs and any functions used would be deterministic in nature.</p>
 
 
 

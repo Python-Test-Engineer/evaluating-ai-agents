@@ -72,8 +72,12 @@ nav:
       - "LLM as Judge": "evaluation/rate_with_llm.md"
       - "Domain Expert": "evaluation/domain_expert.md"
       - "Eval Framework": "evaluation/eval_framework.md"
-  - "Case Study":
+  - "Case Studies":
       - "Overview": "case_study/about.md"
+      - "Langgraph": "case_study/case_study1.md"
+      - "OpenAI Agents": "case_study/case_study2.md"
+      - "Tool calling": "case_study/case_study3.md"
+      - "Evals": "case_study/evidentlyai.md"
 
   - "About Craig":
       - "Services": "craig/services.md"
