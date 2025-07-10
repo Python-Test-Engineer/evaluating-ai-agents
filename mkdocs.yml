@@ -74,6 +74,7 @@ nav:
       - "Overview": "evaluation/overview.md"
       - "PyTest Full Stack": "evaluation/pytest_full_stack.md"
       - "Libraries": "evaluation/libraries.md"
+      - "Evidently.ai": "evaluation/evidently.md"
       - "LLM as Judge": "evaluation/rate_with_llm.md"
       - "Domain Expert": "evaluation/domain_expert.md"
       - "Eval Framework": "evaluation/eval_framework.md"
