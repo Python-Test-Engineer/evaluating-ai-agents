@@ -49,6 +49,8 @@ CORE DATA:
 - Some of these are optional
 - We may use a code to identify the unit under test, e.g `app_unit_test_type`
 
+- RUN_ID (unique run id to group all traces in a workflow)
+- USER_ID
 - ENVIRONMENT (dev/staging/prod)
 - DATETIME
 - TRACE
