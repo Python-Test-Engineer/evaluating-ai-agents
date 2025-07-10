@@ -8,6 +8,11 @@ theme:
   icon:
     repo: fontawesome/brands/github
   name: "material" # readthedocs
+  # Text fonts: Roboto, Open Sans, Noto Sans, Ubuntu, Source Sans Pro
+  # Code fonts: Roboto Mono, Fira Code, Source Code Pro, Ubuntu Mono
+  font:
+    text: Open Sans # For body text
+    code: Open Sans # For code blocks
   palette:
     - media: "(prefers-color-scheme: light)"
       primary: "blue"

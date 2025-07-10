@@ -41,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7COpen+Sans:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Open Sans"}</style>
       
     
     
@@ -301,9 +301,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#two_parts" class="md-nav__link">
+  <a href="#observability" class="md-nav__link">
     <span class="md-ellipsis">
-      Two parts
+      Observability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages
     </span>
   </a>
   
@@ -825,9 +843,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#two_parts" class="md-nav__link">
+  <a href="#observability" class="md-nav__link">
     <span class="md-ellipsis">
-      Two parts
+      Observability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages
     </span>
   </a>
   
@@ -849,7 +885,10 @@
 
 
 <h1 id="tldr">TLDR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h1>
-<h2 id="two_parts">Two parts<a class="headerlink" href="#two_parts" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Two decoupled parts - observability and evaluation.</p>
+</blockquote>
+<h2 id="observability">Observability<a class="headerlink" href="#observability" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Observability by tracing/logging out data.</li>
 <li>Perfroming evals on these datasets.</li>
@@ -861,12 +900,14 @@
 <li>context (optionally)</li>
 <li>metadata (model, temperature, etc.)</li>
 </ul>
-<p>Each Agent has its own <strong>self-reflection</strong> by exporting the above to a CSV that can then be analysed using a range of Eval Libraries like Evidently, DeepEval and Ragas, with or without references (ground truths).</p>
+<p>Each Agent has its own <strong>self-reflection</strong> by exporting the above to a CSV.</p>
+<h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link">&para;</a></h2>
+<p>This CSV can then be analysed using a range of Eval Libraries like Evidently, DeepEval and Ragas, with or without references (ground truths).</p>
 <p><img alt="Log" src="images/example_log_print.png" /></p>
 <blockquote>
 <p>Add REFERENCE column to dataset and then do evals.</p>
 </blockquote>
-<p>Advantages:</p>
+<h2 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Decouples app code and evaluation code.</p>
 <p>Portable Agent/Eval combinations.</p>
