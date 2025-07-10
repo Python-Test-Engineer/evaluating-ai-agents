@@ -891,7 +891,7 @@
 <h2 id="observability">Observability<a class="headerlink" href="#observability" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Observability by tracing/logging out data.</li>
-<li>Perfroming evals on these datasets.</li>
+<li>Performing evals on these datasets.</li>
 </ol>
 <p>Agents/tools are (mathematically) a function with:</p>
 <ul>
@@ -901,12 +901,16 @@
 <li>metadata (model, temperature, etc.)</li>
 </ul>
 <p>Each Agent has its own <strong>self-reflection</strong> by exporting the above to a CSV.</p>
-<h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link">&para;</a></h2>
 <p>This CSV can then be analysed using a range of Eval Libraries like Evidently, DeepEval and Ragas, with or without references (ground truths).</p>
 <p><img alt="Log" src="images/example_log_print.png" /></p>
+<h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Add REFERENCE column to dataset and then do evals.</p>
 </blockquote>
+<p>Once we have our output dataset, we can add ground truths/references and then carry out evals using a range of libraries like Evidently.ai, (my favourite), RAGAS, DeepEval etc.</p>
+<p>We can also create our own evals.</p>
+<p>The log files are generated in real time enabling not just evaluation but also real time monitoring.</p>
+<p>I have also found the log files very useful during development work and bug-fixing.</p>
 <h2 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Decouples app code and evaluation code.</p>
