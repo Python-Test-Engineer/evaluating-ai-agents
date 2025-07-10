@@ -2,7 +2,9 @@
 
 ## Tool calling
 
-The module `tool_calling.py` has 4 tools and they form pairs to test multiple tool calling in a sequence.
+The module `tool_calling.py` has 4 tools and they form pairs to test multiple tool calling in a both parallel and sequential modes.
+
+I have tried to muddy the water regarding weather and temperature so that it can stress tool choice.
 
 ## Independent tools 
 

@@ -573,6 +573,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OpenAI Agents
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -582,6 +593,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      The App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tracing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -783,6 +840,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      The App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tracing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -797,7 +889,26 @@
 
 
 <h1 id="case_study_2">Case Study 2<a class="headerlink" href="#case_study_2" title="Permanent link">&para;</a></h1>
-<p>More detailed information as needed will be added here...</p>
+<h2 id="the_app">The App<a class="headerlink" href="#the_app" title="Permanent link">&para;</a></h2>
+<p>This case study is about a deep research agent that creates a report based on a user query.</p>
+<ol>
+<li>Create N (configurable) questions to ask.</li>
+<li>Create X (configurable) search queries for each question.</li>
+<li>Use a SYNTHESISER agent to create the final report.</li>
+</ol>
+<p>The coodrdinator.py has access to 4 agents, (follow_up_agent.py is not used).</p>
+<p><img alt="agents" src="../../images/case_study2/explorer-view.png" /></p>
+<h2 id="evals">Evals<a class="headerlink" href="#evals" title="Permanent link">&para;</a></h2>
+<p>We need to determine what our top level evals are:</p>
+<p>For a given question, we get a report that is about the question, has the required length and answers the question. We can check length deterministically, we can check the quality firstly by human and then build our LLM judge. "A useful report"</p>
+<p>We can have evals for the steps to make the report:</p>
+<ol>
+<li>Check N and X config values were followed.</li>
+<li>Evaluate the relevance of questions and queries in relation to the question.</li>
+<li>Did the article and retrieved content perform well on standard RAG evaluations - see Evals section.</li>
+</ol>
+<h2 id="tracing">Tracing<a class="headerlink" href="#tracing" title="Permanent link">&para;</a></h2>
+<p>TODO: Add these evals and discuss here...</p>
 
 
 

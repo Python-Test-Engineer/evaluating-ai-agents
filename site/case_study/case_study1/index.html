@@ -552,6 +552,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Langgraph
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -561,6 +572,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#article_writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Article Writer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -783,6 +822,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#article_writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Article Writer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -797,7 +853,18 @@
 
 
 <h1 id="case_study_1">Case Study 1<a class="headerlink" href="#case_study_1" title="Permanent link">&para;</a></h1>
-<p>More detailed information as needed will be added here...</p>
+<h2 id="article_writer">Article Writer<a class="headerlink" href="#article_writer" title="Permanent link">&para;</a></h2>
+<p><img alt="workflow" src="../../images/case_study1/app-writer-mermaid.png" /></p>
+<p>This is a leaf level sub graph meaning it is at the end of all the Agentic actions.</p>
+<p>The first node <code>should_write_article</code> determines if the short article headline is about the selected content topic, in our case AI/Technology.</p>
+<p><img alt="evaluator" src="../../images/case_study1/output-evaluator.png" /></p>
+<p>If so, it goes to the editor that ensure it is translated into the chosen language, French, and has sufficient length and is not sensational. </p>
+<p>This then passes to the <code>publisher</code> and if all are yes, it set <code>postability</code> to yes and in the case ends there, though in production some actions would be taken.</p>
+<p>As you can see from the output, the app works through each of these processes and if all are <code>yes</code> then postability is set to <code>yes</code> and we move to <code>__END__</code>.</p>
+<p><img alt="csv" src="../../images/case_study1/csv-output.png" /></p>
+<p>This case study shows how we can evaluate ROUTING and also parallel tool call - we can think of a node as a tool call as everything is just a function.</p>
+<p>If we had an action at the publisher node, we could then verify that articles are only published if all thre criteria are <code>yes</code>. We could do this by setting a <code>is_published=yes</code> and we can then check deterministically that if <code>is_published=yes</code> then all the others should also be yes.</p>
+<p>We can dump all the output in the log file so that we can see more detail about the LLM call like tokens etc. or filter before dumping to log file.</p>
 
 
 
