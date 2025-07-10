@@ -11,8 +11,8 @@ theme:
   # Text fonts: Roboto, Open Sans, Noto Sans, Ubuntu, Source Sans Pro
   # Code fonts: Roboto Mono, Fira Code, Source Code Pro, Ubuntu Mono
   font:
-    text: Open Sans # For body text
-    code: Open Sans # For code blocks
+    text: Noto Sans # For body text
+    code: Fira Code # For code blocks
   palette:
     - media: "(prefers-color-scheme: light)"
       primary: "blue"
