@@ -32,3 +32,13 @@ code {
     font-family: Consolas, monospace;
     /* font-weight: 700; */
 }
+
+.md-nav__title {
+    font-weight: 400;
+    color: rgb(15, 130, 192);
+}
+
+.md-nav__link.md-nav__link--active {
+    font-weight: 800;
+    font-style: italic;
+}
