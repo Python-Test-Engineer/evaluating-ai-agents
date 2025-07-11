@@ -1,6 +1,6 @@
 # Jury
 
-We can have a panel of judges to create a final decision in one of many wasy or use a Final Judge that reviews all the opinions of judges and forms a final decision.
+We can have a panel of judges to create a final decision in one of many ways or use a Final Judge that reviews all the opinions of judges and forms a final decision.
 
 We can use ML and NLP as judges and not just LLMs.
 
