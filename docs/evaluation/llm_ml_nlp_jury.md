@@ -1,4 +1,4 @@
-# Juries
+# Jury
 
 We can have a panel of judges to create a final decision in one of many wasy or use a Final Judge that reviews all the opinions of judges and forms a final decision.
 
