@@ -68,7 +68,7 @@ markdown_extensions:
 # Page tree
 nav:
   - "TLDR": "index.md"
-  - "Raw Agent": "agent_raw.md"
+  # - "Raw Agent": "agent_raw.md"
   - "Preamble": "preamble.md"
   - "About": "about.md"
   - "Evals":
