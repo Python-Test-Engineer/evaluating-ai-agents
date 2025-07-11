@@ -8,9 +8,7 @@ This is more of a development tool rather than final evalauation.
 
 Arxiv Paper: [https://arxiv.org/pdf/2412.05579](https://arxiv.org/pdf/2412.05579)
 
-Definitive guide to building LLM Judges:
-
-[How to build LLM Judges](https://hamel.dev/blog/posts/llm-judge/)
+[Definitive guide to building LLM Judges](https://hamel.dev/blog/posts/llm-judge/)
 
 ## Uses
 

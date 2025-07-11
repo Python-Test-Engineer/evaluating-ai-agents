@@ -77,6 +77,7 @@ nav:
       - "Libraries": "evaluation/libraries.md"
       - "Evidently.ai": "evaluation/evidently.md"
       - "LLM as Judge": "evaluation/rate_with_llm.md"
+      - "LLM/ML/NLP Jury": "evaluation/llm_ml_nlp_jury.md"
       - "Domain Expert": "evaluation/domain_expert.md"
       - "Eval Framework": "evaluation/eval_framework.md"
   - "Case Studies":
