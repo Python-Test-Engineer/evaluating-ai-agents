@@ -4,6 +4,7 @@
 ## App
 
 We will evaluate the SQL Agent from Langchain as the basis for a chain of SQL in an Agentic app.
+![app](../images/case_study4/app.png)
 
 This is a full stack app with detailed video by Langchain using the repo and article below.
 

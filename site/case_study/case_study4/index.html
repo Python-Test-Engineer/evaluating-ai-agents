@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../case_study3/">
+      
+      
+        <link rel="next" href="../evidentlyai/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>SQL Agent - Evaluating AI Agents</title>
+        <title>4 SQL Agent - Evaluating AI Agents</title>
       
     
     
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SQL Agent
+              4 SQL Agent
             
           </span>
         </div>
@@ -273,6 +277,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../agent_raw/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raw Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../preamble/" class="md-nav__link">
         
   
@@ -298,26 +322,6 @@
   
   <span class="md-ellipsis">
     About
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../agent_raw/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Raw
   </span>
   
 
@@ -519,17 +523,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -543,7 +549,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Case Studies
@@ -582,7 +588,7 @@
         
   
   <span class="md-ellipsis">
-    Langgraph
+    1 Langgraph
   </span>
   
 
@@ -603,7 +609,7 @@
         
   
   <span class="md-ellipsis">
-    OpenAI Agents
+    2 OpenAI Agents
   </span>
   
 
@@ -624,11 +630,90 @@
         
   
   <span class="md-ellipsis">
-    Tool calling
+    3 Tool calling
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4 SQL Agent
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4 SQL Agent
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    <span class="md-ellipsis">
+      App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eval
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -645,7 +730,7 @@
         
   
   <span class="md-ellipsis">
-    Evals
+    5 Evidently.ai
   </span>
   
 
@@ -808,6 +893,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    <span class="md-ellipsis">
+      App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eval
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -822,7 +933,32 @@
 
 
 <h1 id="sql_agent">SQL Agent<a class="headerlink" href="#sql_agent" title="Permanent link">&para;</a></h1>
-<p>We will evaluate the SQL Agent from Langchain as the basis for a chain of SQL in an Agentic app... </p>
+<h2 id="app">App<a class="headerlink" href="#app" title="Permanent link">&para;</a></h2>
+<p>We will evaluate the SQL Agent from Langchain as the basis for a chain of SQL in an Agentic app.
+<img alt="app" src="../../images/case_study4/app.png" /></p>
+<p>This is a full stack app with detailed video by Langchain using the repo and article below.</p>
+<p><a href="https://www.youtube.com/watch?v=LRcjlXL9hPA">https://www.youtube.com/watch?v=LRcjlXL9hPA</a></p>
+<p><a href="https://github.com/DhruvAtreja/datavisualization_langgraph/tree/main">https://github.com/DhruvAtreja/datavisualization_langgraph/tree/main</a></p>
+<p><a href="https://blog.langchain.com/data-viz-agent/">https://blog.langchain.com/data-viz-agent/</a></p>
+<h2 id="eval">Eval<a class="headerlink" href="#eval" title="Permanent link">&para;</a></h2>
+<p>We can consolidate the principles we have been developing in this manual:</p>
+<ol>
+<li>Find the Agentic inflection points.</li>
+<li>Log out INPUT-CONTEXT-OUTPUT-METADATA</li>
+</ol>
+<p>The app has a central LLM Manager (<a href="https://github.com/DhruvAtreja/datavisualization_langgraph/blob/main/backend_py/my_agent/LLMManager.py">https://github.com/DhruvAtreja/datavisualization_langgraph/blob/main/backend_py/my_agent/LLMManager.py</a></p>
+<p><img alt="llm manager" src="../../images/case_study4/llm-manager.png" /></p>
+<p>It is tempting to use this one LLM inflection point to do our logging.</p>
+<p>However, a fundamental principle is that each agent contains its own observability capability and we would be vulnerable to changes/removal of the LLM Manger.</p>
+<p>This we will look throuhg the <a href="https://github.com/DhruvAtreja/datavisualization_langgraph/tree/main/backend_py/my_agent">https://github.com/DhruvAtreja/datavisualization_langgraph/tree/main/backend_py/my_agent</a> folder and find the LLM calls.</p>
+<p>We will then add our logging, customised to the agent, and logged to its own logging file.</p>
+<p>We can always merge log files later if needed.</p>
+<p><img alt="SQL Agent" src="../../images/case_study4/sql-agent.png" /></p>
+<p>Here we can see the SQL Agent <a href="https://github.com/DhruvAtreja/datavisualization_langgraph/blob/main/backend_py/my_agent/SQLAgent.py">https://github.com/DhruvAtreja/datavisualization_langgraph/blob/main/backend_py/my_agent/SQLAgent.py</a> and the INPUTS of <code>prompt, schema and question</code> along with the OUTPUT of <code>parsed_response</code> can be logged along with all the other metadata from then input and output side as needed.</p>
+<p>We can also log the STATE machine at any point too.</p>
+<p>Again, it ends up being the insertion of a log statement after any LLM call:</p>
+<p><img alt="Log" src="../../images/example_log_print.png" /></p>
+<p>with its exact structure varying with the agent and being logged to its own associated log file.</p>
 
 
 
