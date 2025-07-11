@@ -1,0 +1,3 @@
+# SQL Agent
+
+We will evaluate the SQL Agent from Langchain as the basis for a chain of SQL in an Agentic app... 
