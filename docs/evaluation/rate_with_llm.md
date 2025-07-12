@@ -10,6 +10,8 @@ Arxiv Paper: [https://arxiv.org/pdf/2412.05579](https://arxiv.org/pdf/2412.05579
 
 [Definitive guide to building LLM Judges](https://hamel.dev/blog/posts/llm-judge/)
 
+![summary](../images/llm_judge/summary-list.png)
+
 ## Uses
 
 Some example additional uses:
