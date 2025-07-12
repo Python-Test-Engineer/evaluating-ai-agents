@@ -20,6 +20,10 @@ This CSV can then be analysed using a range of Eval Libraries like Evidently, De
 
 ![Log](./images/example_log_print.png)
 
+We find where the LLM point is in our code if we are doing evals after dev:
+
+![LLM](./images/case_study4/sql-agent-2.png)
+
 ## Evaluation
 
 > Add REFERENCE column to dataset and then do evals.
