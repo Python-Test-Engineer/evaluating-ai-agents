@@ -88,11 +88,11 @@ nav:
       - "4 SQL Agent": "case_study/case_study4.md"
       - "5 Evidently.ai": "case_study/evidentlyai.md"
 
-  - "About Craig":
-      - "Services": "craig/services.md"
-      - "CV": "craig/cv.md"
-      - "Courses": "craig/courses.md"
-      - "Contact": "craig/contact.md"
+  # - "About Craig":
+  #     - "Services": "craig/services.md"
+  #     - "CV": "craig/cv.md"
+  #     - "Courses": "craig/courses.md"
+  #     - "Contact": "craig/contact.md"
 
 copyright: |
   &copy; 2025 <a href="https://evaluating-ai-agents.netlify.app/"  target="_blank" rel="noopener">Craig West -  Evaluating AI Agents</a>
