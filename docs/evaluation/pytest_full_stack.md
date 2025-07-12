@@ -4,9 +4,9 @@ When I was studying/wroking with PyTest, I came across a great many resources, y
 
 I put together a template for PyTest Full Stack that enabled developers to drop thier app in `src` and have a complete PyTest Full Stack suite to test from DB schema all the way through API and E2E testing.
 
-It contains around 200 template tests that are ready to go.
+It contains around 200 template tests from DB Schema to API and E2E browser tests that are ready to go.
 
-I published the manual at [https://pytest-cookbook.com/](https://pytest-cookbook.com and the repo at [https://github.com/Python-Test-Engineer/PyTest-Full-Stack](https://github.com/Python-Test-Engineer/PyTest-Full-Stack).
+I published the manual at [https://pytest-cookbook.com/](https://pytest-cookbook.com) and the repo at [https://github.com/Python-Test-Engineer/PyTest-Full-Stack](https://github.com/Python-Test-Engineer/PyTest-Full-Stack).
 
 It had HTML, Coverage and its own CSV custom reporting built in as well as some plugins for console formatting.
 
