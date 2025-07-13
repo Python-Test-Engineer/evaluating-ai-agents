@@ -45,3 +45,5 @@ I have also found the log files very useful during development work and bug-fixi
 > Evals are real time and support both developer and QA.
 
 > Frictionless integration to existing apps and new ones.
+
+> CSV output easier to digest than UI traces. In fact, I tend to want to export the traces as CSVs.
