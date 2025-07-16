@@ -20,6 +20,8 @@ This CSV can then be analysed using a range of Eval Libraries like Evidently, De
 
 ![Log](./images/example_log_print.png)
 
+We can have two traces at each point. One a more concise version for the developer (and QA) as well as a complete trace for the QA.
+
 We find where the LLM point is in our code if we are doing evals after dev:
 
 ![LLM](./images/case_study4/sql-agent-2.png)
@@ -47,5 +49,7 @@ I have also found the log files very useful during development work and bug-fixi
 > Frictionless integration to existing apps and new ones.
 
 > CSV output easier to digest than UI traces. In fact, I tend to want to export the traces as CSVs.
+
+> If we are using some sort of Agent Context Protocol, we can avoid mixed telemetry systems by having each agent do its own telemetry.
 
 <br>
