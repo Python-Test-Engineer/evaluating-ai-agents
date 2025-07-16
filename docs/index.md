@@ -1,5 +1,13 @@
 # TLDR
 
+<h3 style="font-style:italic;color: #FFA500">
+Test:<br><br>
+- In production<br>
+- In real time<br>
+- In front of the client
+</h3>
+<br>
+
 > Two decoupled parts - observability and evaluation.
 
 ## Observability
