@@ -7,7 +7,7 @@ Test:<br>
 - In front of the client
 </div>
 
-> Two decoupled parts - observability and evaluation.
+> Two decoupled parts - observability and evaluation
 
 ## Observability
 
