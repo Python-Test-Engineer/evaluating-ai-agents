@@ -1,12 +1,11 @@
 # TLDR
 
-<h3 style="font-style:italic;color: #FFA500">
-Test:<br><br>
+<div style="font-style:italic;font-size:26px;">
+Test:<br>
 - In production<br>
 - In real time<br>
 - In front of the client
-</h3>
-<br>
+</div>
 
 > Two decoupled parts - observability and evaluation.
 
