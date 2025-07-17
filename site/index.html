@@ -319,6 +319,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ab_testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      A/B Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vendor_example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vendor Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#advantages" class="md-nav__link">
     <span class="md-ellipsis">
       Advantages
@@ -798,6 +816,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ab_testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      A/B Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vendor_example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vendor Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#advantages" class="md-nav__link">
     <span class="md-ellipsis">
       Advantages
@@ -850,6 +886,7 @@ Test:<br>
 <p>We can have two traces at each point. One a more concise version for the developer (and QA) as well as a complete trace for the QA.</p>
 <p>We find where the LLM point is in our code if we are doing evals after dev:</p>
 <p><img alt="LLM" src="images/case_study4/sql-agent-2.png" /></p>
+<p><em>(There is logging already in place L:124. We would use CSV writing, e.g. L:194 is an LLM point).</em></p>
 <h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Add REFERENCE column to dataset and then do evals.</p>
@@ -858,11 +895,126 @@ Test:<br>
 <p>We can also create our own evals.</p>
 <p>The log files are generated in real time enabling not just evaluation but also real time monitoring.</p>
 <p>I have also found the log files very useful during development work and bug-fixing.</p>
+<h2 id="ab_testing">A/B Testing<a class="headerlink" href="#ab_testing" title="Permanent link">&para;</a></h2>
+<p>We can have multiple versions of the same Agent running in parallel and then do A/B testing on them. This may just be changing the prompt so that we can find the best performing prompt for the Agent, or it may be changing the model used.</p>
+<h2 id="vendor_example">Vendor Example<a class="headerlink" href="#vendor_example" title="Permanent link">&para;</a></h2>
+<p>Langsmith etc all make use of Open Telemetry which can be considered a Turbo Logging system. Ultimately, it is a trace system. Vendors then provide a UI to view the traces.</p>
+<p>However, it is often more amenable to see horzontal formats, (CSVs), rather then vertical (UI) formats.</p>
+<p>If we want to analyse 300 traces, we would want to export them to a CSV anyway.</p>
+<p>We can always use BOTH the CSV and UI formats.</p>
+<p>We can export Langsmith runs to CSVs using the following code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import pandas as pd
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>from langsmith import Client
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>import os
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a># Initialize the client
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>client = Client(
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    api_url=&quot;https://api.smith.langchain.com&quot;,
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    api_key=os.getenv(&quot;LANGCHAIN_API_KEY&quot;)  # Set your API key as env variable
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>)
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a># Export runs from a project
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>def export_runs_to_csv(project_name, output_file=&quot;langsmith_runs.csv&quot;):
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    runs = []
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    # Fetch runs from the project
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    for run in client.list_runs(project_name=project_name):
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    # Complete list of fields available
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        run_data = {
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>            # Required fields
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>            &quot;id&quot;: str(run.id),
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            &quot;name&quot;: run.name,
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            &quot;start_time&quot;: run.start_time,
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>            &quot;run_type&quot;: run.run_type,
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>            &quot;trace_id&quot;: str(run.trace_id),
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>            # Optional timing fields
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>            &quot;end_time&quot;: run.end_time,
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>            &quot;first_token_time&quot;: getattr(run, &#39;first_token_time&#39;, None),
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>            # Hierarchy and structure
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>            &quot;parent_run_id&quot;: str(run.parent_run_id) if run.parent_run_id else None,
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>            &quot;parent_run_ids&quot;: [str(id) for id in run.parent_run_ids] if getattr(run, &#39;parent_run_ids&#39;, None) else None,
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>            &quot;child_run_ids&quot;: [str(id) for id in run.child_run_ids] if getattr(run, &#39;child_run_ids&#39;, None) else None,
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>            &quot;dotted_order&quot;: getattr(run, &#39;dotted_order&#39;, &#39;&#39;),
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>            # Session and project info
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>            &quot;session_id&quot;: str(run.session_id) if getattr(run, &#39;session_id&#39;, None) else None,
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>            &quot;reference_example_id&quot;: str(run.reference_example_id) if run.reference_example_id else None,
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>            # Status and error handling
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>            &quot;status&quot;: getattr(run, &#39;status&#39;, None),
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>            &quot;error&quot;: run.error,
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>            # Input/Output data
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>            &quot;inputs&quot;: str(run.inputs) if run.inputs else None,
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>            &quot;outputs&quot;: str(run.outputs) if run.outputs else None,
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>            # Token usage metrics
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>            &quot;total_tokens&quot;: getattr(run, &#39;total_tokens&#39;, None),
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>            &quot;prompt_tokens&quot;: getattr(run, &#39;prompt_tokens&#39;, None),
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>            &quot;completion_tokens&quot;: getattr(run, &#39;completion_tokens&#39;, None),
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>            # Cost metrics
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>            &quot;total_cost&quot;: float(run.total_cost) if getattr(run, &#39;total_cost&#39;, None) else None,
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>            &quot;prompt_cost&quot;: float(run.prompt_cost) if getattr(run, &#39;prompt_cost&#39;, None) else None,
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>            &quot;completion_cost&quot;: float(run.completion_cost) if getattr(run, &#39;completion_cost&#39;, None) else None,
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>            # Metadata and tagging
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>            &quot;tags&quot;: &quot;,&quot;.join(run.tags) if run.tags else None,
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>            &quot;extra&quot;: str(run.extra) if run.extra else None,
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>            # Serialization and events
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>            &quot;serialized&quot;: str(run.serialized) if run.serialized else None,
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>            &quot;events&quot;: str(run.events) if run.events else None,
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>            # Feedback and stats
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>            &quot;feedback_stats&quot;: str(getattr(run, &#39;feedback_stats&#39;, None)) if getattr(run, &#39;feedback_stats&#39;, None) else None,
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>            # App and manifest info
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>            &quot;app_path&quot;: getattr(run, &#39;app_path&#39;, None),
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>            &quot;manifest_id&quot;: str(run.manifest_id) if getattr(run, &#39;manifest_id&#39;, None) else None,
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>            # Dataset relationship
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>            &quot;in_dataset&quot;: getattr(run, &#39;in_dataset&#39;, None),
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>            # Attachments
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>            &quot;attachments&quot;: str(run.attachments) if getattr(run, &#39;attachments&#39;, None) else None,
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>            # Computed fields (properties)
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>            &quot;execution_order&quot;: getattr(run, &#39;execution_order&#39;, None),
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>            &quot;child_execution_order&quot;: getattr(run, &#39;child_execution_order&#39;, None),
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>            # URL (computed property)
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>            &quot;url&quot;: getattr(run, &#39;url&#39;, None),
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>            # Metadata and revision (computed properties)
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>            &quot;metadata&quot;: str(getattr(run, &#39;metadata&#39;, None)) if getattr(run, &#39;metadata&#39;, None) else None,
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>            &quot;revision_id&quot;: str(getattr(run, &#39;revision_id&#39;, None)) if getattr(run, &#39;revision_id&#39;, None) else None,
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>            # Calculated duration (helpful metric)
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>            &quot;duration_ms&quot;: (run.end_time - run.start_time).total_seconds() * 1000 if run.end_time and run.start_time else None,
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>            # Child runs (if present)
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>            &quot;child_runs_count&quot;: len(getattr(run, &#39;child_runs&#39;, [])) if getattr(run, &#39;child_runs&#39;, None) else 0,
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>        }
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>        runs.append(run_data)
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>    # Convert to DataFrame and save
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>    df = pd.DataFrame(runs)
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>    df.to_csv(output_file, index=False)
+</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>    print(f&quot;Exported {len(runs)} runs to {output_file}&quot;)
+</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>
+</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a># Usage
+</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>export_runs_to_csv(&quot;your-project-name&quot;)
+</span></code></pre></div>
+<p>All the essential fields from <code>run_data</code> are available to us in our custom tracing utility, so we do not lose anything of importance. Many fields are for the UI display.</p>
 <h2 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>Decouples app code and evaluation code.</p>
+<p>Decouples app code and evaluation code. We can move a 'node' from one place to another without having to change the code in the app.</p>
 <p>Portable Agent/Eval combinations.</p>
-<p>Evals are real time and support both developer and QA.</p>
+<p>Evals are real time and support both developer and QA. </p>
+<p>Clients can have a window on their Agents and have a greater sense of trust and understanding as they hand over their business to Agents.</p>
 <p>Frictionless integration to existing apps and new ones.</p>
 <p>CSV output easier to digest than UI traces. In fact, I tend to want to export the traces as CSVs.</p>
 <p>If we are using some sort of Agent Context Protocol, we can avoid mixed telemetry systems by having each agent do its own telemetry.</p>
