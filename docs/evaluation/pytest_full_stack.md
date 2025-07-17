@@ -1,6 +1,6 @@
 # PyTest Full Stack
 
-When I was studying/wroking with PyTest, I came across a great many resources, yet each was not complete.
+When I was studying/working with PyTest, I came across a great many resources, yet each was not complete.
 
 I put together a template for PyTest Full Stack that enabled developers to drop thier app in `src` and have a complete PyTest Full Stack suite to test from DB schema all the way through API and E2E testing.
 
@@ -17,3 +17,17 @@ I gave a workshop 'Getting started with PyTest' at PyCon Ireland in November 202
 ![PyTest Full Stack](../images/pytest-cookbook-2.png)
 
 This can then be used as a full QA testing of an application.
+
+## Evaluating AI Agents
+
+We can do Agentic Evals as already discussed.
+
+## API
+
+If we have a NextJS app we can do API testing as well.
+
+## E2E
+
+If we have a NextJS app we can do E2E testing with Playwright, capturing screenshots and videos. 
+
+We can also record tracing for debugging.
