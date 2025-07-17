@@ -31,3 +31,5 @@ If we have a NextJS app we can do API testing as well.
 If we have a NextJS app we can do E2E testing with Playwright, capturing screenshots and videos. 
 
 We can also record tracing for debugging.
+
+<br>
