@@ -32,8 +32,8 @@ We can have two traces at each point. One a more concise version for the develop
 We find where the LLM point is in our code if we are doing evals after dev:
 
 ![LLM](./images/case_study4/sql-agent-2.png)
-
-*(There is logging already in place L:124. We would use CSV writing, e.g. L:194 is an LLM point).*
+<!-- 
+*(There is logging already in place L:124. We would use CSV writing, e.g. L:194 is an LLM point).* -->
 
 
 ## Evaluation
