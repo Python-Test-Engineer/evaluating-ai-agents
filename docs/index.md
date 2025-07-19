@@ -18,8 +18,10 @@ Agents/tools are (mathematically) a function with:
 
 - input
 - output
-- context (optionally)
+- retrieval/memory/tools (optionally)
 - metadata (model, temperature, etc.)
+
+![braintrust](./images/braintrust-eval.png)
 
 Each Agent has its own **self-reflection** by exporting the above to a CSV.
 
